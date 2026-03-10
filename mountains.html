@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Peaks</title>
+    <link rel="stylesheet" href="szczyty.css">
+    
+</head>
+<body>
+    <h1>Mountain Peaks</h1>
+
+    <select id="szczyty">
+        <option value="wybierz">Select a mountain range</option>
+        <option value="rysy">Tatra Mountains - Rysy</option>
+        <option value="sniezka">Karkonosze Mountains - Śnieżka</option>
+        <option value="babia">Beskidy Mountains - Babia Góra</option>
+    </select>
+    <label>
+    <input type="checkbox" id="checkbox"> I accept the terms
+    </label>
+    <div id="info"></div>
+    <div id="kontenery">
+        <div id="wiekszy"></div>
+        <div id="mniejszy"></div>
+    </div>
+<a href="main-index.html" id="back-btn"><- Back to Portfolio</a>
+
+    <script>
+        const szczyty = document.getElementById('szczyty');
+        const info = document.getElementById('info');
+        const checkbox = document.getElementById('checkbox');
+        const wiekszy = document.getElementById('wiekszy');
+        const mniejszy = document.getElementById('mniejszy');
+
+
+        szczyty.addEventListener('change', function(){
+            wiekszy.innerHTML = `<h1>Large image</h1> <img src="${szczyty.value}_duze.jpg" alt="szczyty">`,
+            mniejszy.innerHTML = `<h1>Small image</h1> <img src="${szczyty.value}_male.jpg" alt="szczyty">`
+        })
+       
+
+
+        checkbox.addEventListener('change', function(){
+            if (checkbox.checked){
+                info.innerHTML = "<h2>Remember! Read the regulations</h2>"
+            } else {
+                info.innerHTML = "";
+            }
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>

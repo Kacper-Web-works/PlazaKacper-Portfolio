@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: solid black 1px;
+            border-collapse: collapse;
+        }
+
+        .szachy tr:nth-child(odd) td:nth-child(even){
+            background-color: chocolate;
+        }
+        .szachy tr:nth-child(even) td:nth-child(odd){
+            background-color: chocolate;
+        }
+    #back-btn {
+    padding: 10px;
+    margin: 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <a href="main-index.html" id="back-btn"><- Back to Portfolio</a>
+ <h2>1. Descending Number Triangle (Nested Loops)</h2>
+    <div id="div1"></div>
+    
+    <p>---------</p> 
+    
+    <h2>2. Reversed Nested Loop Structure</h2>
+    <div id="div2"></div>
+    
+    <p>---------</p>
+    
+    <h2>3. Square Number Grid</h2>
+    <div id="div3"></div>
+    
+    <p>---------</p>
+    
+    <h2>4. Power of Two - Dynamic Table Generation</h2>
+    <div id="div4"></div>
+    
+    <p>---------</p>
+    
+    <h2>5. Chessboard Pattern</h2>
+    <div id="div5"></div>
+
+
+    <script>
+// Zad 1:
+   for (let i=5; i>=1;i--) {
+            for (let j=1; j<=i; j++) {
+        div1.innerHTML += j + " ";
+    }
+    div1.innerHTML += "<br>";
+} 
+
+// Zad 2:
+
+for (let i=1; i<=5;i++) {
+            for (let j=5; j>=i; j--) {
+        div2.innerHTML += j + " ";
+    }
+    div2.innerHTML += "<br>";
+}
+
+// Zad 3:
+
+   for (let i=1; i<=5;i++) {
+            for (let j=1; j<=5; j++) {
+        div3.innerHTML += j + " ";
+    }
+    div3.innerHTML += "<br>";
+}
+
+// Zad 4:
+
+    for (let i=1;i<=9;i++){
+        div4.innerHTML += `<table> <tr> <td> ${i}</td><td> ${i*i}</td></tr></table>`;
+        }        
+
+// Zad 5:
+
+let tabela = `<table class="szachy">`
+for(let i=1;i<=10;i++){
+        tabela += `<tr> <td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td><td> ${i} </td></tr>`;
+}  
+     tabela += "</table"
+     div5.innerHTML = tabela;
+
+
+    </script>
+</body>
+</html>

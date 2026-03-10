@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-suwaki-kolory.css">
+</head>
+<body>
+    
+  <nav>
+    <h1>MENU</h1>
+    <a href="main-index.html" id="back-btn"><- Back to Portfolio</a> <br>
+    Change circle background color: <br>
+    <input type="button" id="R" value="Red">
+    <input type="button" id="G" value="Green">
+    <input type="button" id="B" value="Blue">
+    <input type="button" id="RESET" value="Reset"> <br>
+    <br>
+
+    Change circle size: <input type="range" id="Wkola" min="0" max="250" value="125">
+    <br><br>
+    Change font size in circle: <input type="range" id="Czkola" min="0" max="150" value="14">
+    <br>
+    <br>
+    Change page background color with sliders: <br>
+    <input type="range" min="0" max="255" value="100" id="BCR">
+    <input type="range" min="0" max="255" value="100" id="BCG">
+    <input type="range" min="0" max="255" value="100" id="BCB"> <br>
+    
+    Change circle background color with sliders: <br>
+    <input type="range" min="0" max="255" value="100" id="BCDR">
+    <input type="range" min="0" max="255" value="100" id="BCDG">
+    <input type="range" min="0" max="255" value="100" id="BCDB">
+</nav>
+
+<main id="kontent"> 
+    <div id="kolo">Font</div> 
+</main>
+<footer> 
+    <p>Developed by: Kacper Płaza</p> 
+</footer>
+
+    <script>
+       // --- KOLORY KOŁA (Przyciski) ---
+R.addEventListener("click", function(){
+    kolo.style.backgroundColor = "red";
+});
+G.addEventListener("click", function(){
+    kolo.style.backgroundColor = "green";
+});
+B.addEventListener("click", function(){
+    kolo.style.backgroundColor = "blue";
+});
+RESET.addEventListener("click", function(){
+    kolo.style.backgroundColor = "aquamarine";
+});
+
+// --- WIELKOŚĆ KOŁA ---
+Wkola.addEventListener("input", function(){
+    kolo.style.width = Wkola.value + 'px';
+    kolo.style.height = Wkola.value + 'px';
+    
+    checkFontSize();
+});
+
+// --- WIELKOŚĆ CZCIONKI W KOLE ---
+Czkola.addEventListener("input", function(){
+    checkFontSize();
+});
+
+// Naprawienie wychodzenia czcionki poza koło
+function checkFontSize() {
+    let circleSize = parseInt(Wkola.value);
+    let fontSize = parseInt(Czkola.value);
+
+    let maxSafeSize = Math.floor(circleSize * 0.6);
+
+    if (fontSize > maxSafeSize) {
+        kolo.style.fontSize = maxSafeSize + 'pt';
+    } else {
+        kolo.style.fontSize = fontSize + 'pt';
+    }
+}
+
+// --- KOLOR TŁA STRONY (Suwaki) ---
+BCR.addEventListener("input", function(){
+    kontent.style.backgroundColor = `rgb(${BCR.value}, ${BCG.value}, ${BCB.value})`;
+});
+BCG.addEventListener("input", function(){
+    kontent.style.backgroundColor = `rgb(${BCR.value}, ${BCG.value}, ${BCB.value})`;
+});
+BCB.addEventListener("input", function(){
+    kontent.style.backgroundColor = `rgb(${BCR.value}, ${BCG.value}, ${BCB.value})`;
+});
+
+// --- KOLOR KOŁA (Suwaki) ---
+BCDR.addEventListener("input", function(){
+    kolo.style.backgroundColor = `rgb(${BCDR.value}, ${BCDG.value}, ${BCDB.value})`;
+});
+BCDG.addEventListener("input", function(){
+    kolo.style.backgroundColor = `rgb(${BCDR.value}, ${BCDG.value}, ${BCDB.value})`;
+});
+BCDB.addEventListener("input", function(){
+    kolo.style.backgroundColor = `rgb(${BCDR.value}, ${BCDG.value}, ${BCDB.value})`;
+});
+    </script>
+</body>
+</html>

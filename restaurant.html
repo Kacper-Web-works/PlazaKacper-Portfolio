@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant "All Flavors"</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+    <section id="baner">
+        <h1>Welcome to "All Flavors" Restaurant</h1>
+    </section>
+
+    <section id="lewy">
+        <img src="restaurant.jpg" alt="Our dish" id="zdj">
+    </section>
+
+    <section id="prawy">
+        <h4>Great food, great atmosphere!</h4>
+        <ol>
+            <li>Lunch from 40 PLN</li>
+            <li>Snacks from 10 PLN</li>
+            <li>Dinner from 20 PLN</li>
+        </ol>
+    </section>
+
+    <section id="dolny">
+        <form action="rezerwacja.php">
+            
+            <h2>Book a table online</h2> <br>
+            <label>Reservation date: <br> [format dd-mm-yyyy]</label><br>
+            <input type="date" name="date"><br>
+
+            <label for="">Number of guests:</label><br>
+            <input type="number" name="guests"><br>
+
+            <label for="">Phone number:</label><br>
+            <input type="tel" name="phone" maxlength="13"><br>
+
+            <input type="checkbox" id="check">
+            <label for="" id="labelZgoda">I agree to the processing of personal data</label><br>
+
+            <input type="reset" value="Clear" id="btn">
+            <input type="submit" value="Book now" id="btn">
+
+        </form>
+    </section>
+
+    <footer>Website developed by: Kacper</footer>
+        <a href="main-index.html" id="back-btn"><- Back to Portfolio</a>
+    
+    <script>
+        const check = document.getElementById('check');
+        const labelZgoda = document.getElementById('labelZgoda');
+
+        check.addEventListener('change', function(){
+            if(check.checked){
+                labelZgoda.innerHTML = "Consent given for data processing";}
+            else {
+                labelZgoda.innerHTML = "I agree to the processing of personal data";
+            }
+        })
+    </script>
+</body>
+</html>
