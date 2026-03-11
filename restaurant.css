@@ -66,3 +66,14 @@ footer{
     border-radius: 5px;
     font-family: Arial, sans-serif;
 }
+
+@media (max-width: 600px) {
+    section {
+        width: 100% !important;
+        float: none !important;
+    }
+    #zdj {
+        width: 100% !important;
+        height: auto;
+    }
+}
