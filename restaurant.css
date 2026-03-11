@@ -5,9 +5,11 @@ body{
 
 #baner {
     background-color: #2F180C;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: khaki;
-    height: 60px;
+    height: 100px;
 }
 
 #baner h1{
@@ -46,6 +48,7 @@ footer{
 
 #zdj{
     height: 350px;
+    width: 70%;
 }
 
 #btn{
@@ -66,4 +69,3 @@ footer{
     border-radius: 5px;
     font-family: Arial, sans-serif;
 }
-
