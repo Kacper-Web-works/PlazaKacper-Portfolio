@@ -59,3 +59,15 @@ footer {
     font-family: Arial, sans-serif;
 }
 
+@media (max-width: 600px) {
+    nav {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+    #kontent {
+        height: 50vh !important;
+    }
+    input[type="range"] {
+        width: 80vw;
+    }
+}
