@@ -14,6 +14,9 @@ body {
 #B { background-color: blue; color: white; padding: 5px; cursor: pointer; margin-top: 3px; }
 #RESET { background-color: aquamarine; padding: 5px; cursor: pointer; margin-top: 3px; }
 
+.ranges {
+margin-top: 3px;
+}
 nav {
     width: 100%;
     min-height: 40vh;
@@ -74,4 +77,5 @@ footer {
         width: 80%; 
     }
 }
+
 
