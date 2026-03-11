@@ -9,10 +9,10 @@ body {
     background-color: #f0f4f8;
 }
 
-#R { background-color: red; color: white; padding: 5px; cursor: pointer; }
-#G { background-color: green; color: white; padding: 5px; cursor: pointer; }
-#B { background-color: blue; color: white; padding: 5px; cursor: pointer; }
-#RESET { background-color: aquamarine; padding: 5px; cursor: pointer; }
+#R { background-color: red; color: white; padding: 5px; cursor: pointer; margin-top: 3px; }
+#G { background-color: green; color: white; padding: 5px; cursor: pointer; margin-top: 3px; }
+#B { background-color: blue; color: white; padding: 5px; cursor: pointer; margin-top: 3px; }
+#RESET { background-color: aquamarine; padding: 5px; cursor: pointer; margin-top: 3px; }
 
 nav {
     width: 100%;
@@ -74,3 +74,4 @@ footer {
         width: 80%; 
     }
 }
+
