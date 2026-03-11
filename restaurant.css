@@ -35,7 +35,7 @@ body{
     text-align: center;
     padding: 30px;
     clear: both;
-    height: 30vh;
+    height: fit-content;
 }
 
 footer{
@@ -66,3 +66,4 @@ footer{
     border-radius: 5px;
     font-family: Arial, sans-serif;
 }
+
