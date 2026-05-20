@@ -64,9 +64,15 @@
         }
 
         .project-box p {
-            font-size: 0.9em;
+            font-size: 1em;
             margin-top: 10px;
             color: #e0e0e0;
+        }
+
+        #zdj{
+            max-width: 100%; 
+            border-radius: 5px; 
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -78,7 +84,7 @@
 
     <div id="about-me">
         <h2>About Me</h2>
-        <p>I am a 3rd-year IT student. I love coding simple web tools. This page shows my programming skills in HTML, CSS and JavaScript.</p>
+        <p>I am a 3rd-year IT student. I love coding simple web tools and working with 3D design in Solid Edge. This page shows my programming skills in HTML, CSS and JavaScript.</p>
     </div>
 
     <h2>Sample Projects</h2>
@@ -99,9 +105,9 @@
             <p>Advanced tool to change circle size, font, and background colors using interactive sliders and buttons.</p>
         </a>
 
-        <a href="mountains.html" class="project-box">
-            <h3>Mountain Gallery</h3>
-            <p>Interactive image gallery featuring peak selection and event-based status updates.</p>
+        <a href="cars.html" class="project-box">
+            <h3>Cars Gallery</h3>
+            <p>Interactive image gallery featuring car selection and event-based status updates.</p>
         </a>
 
         <a href="loops.html" class="project-box">
@@ -116,10 +122,19 @@
 <div id="about-me">
     <p>Beside web development, I also rarely design 3D parts in <b>Siemens Solid Edge</b>. Here is one of my projects:</p>
     <div style="text-align: center; margin-top: 15px;">
-        <img src="walek3d.png" alt="SolidEdgeProject" style="max-width: 100%; border-radius: 5px; border: 1px solid #ccc;">
-        <img src="walek3dv2.png" alt="SolidEdgeProject" style="max-width: 100%; border-radius: 5px; border: 1px solid #ccc;">
+        <img src="walek3d.png" alt="SolidEdgeProject" id="zdj" class="zdj1">
+        <img src="walek3dv2.png" alt="SolidEdgeProject" id="zdj" class="zdj2">
          </div>
 </div>
-</body>
 
+<script>
+    let zdj1 = document.querySelector(".zdj1");
+
+    zdj1.addEventListener("click", function(){
+        zdj1.style.width=1000+"px";
+        zdj1.style.height=1000+"px";
+    })
+
+</script>
+</body>
 </html>
