@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Peaks</title>
+    <link rel="stylesheet" href="cars.css">
+    
+</head>
+<body>
+    <h1>"Pickup" trucks</h1>
+
+    <select id="auta">
+        <option value="wybierz">Select a pickup truck!</option>
+        <option value="ford">Ford</option>
+        <option value="gmc">GMC</option>
+        <option value="ram">RAM</option>
+        <option value="silverado">Chevrolet</option>
+    </select>
+    <label>
+    <input type="checkbox" id="checkbox"> I accept the terms
+    </label>
+    <div id="info"></div>
+    <div id="kontenery">
+        <div id="wiekszy"></div>
+        <div id="mniejszy"></div>
+    </div>
+<a href="index.html" id="back-btn"><- Back to Portfolio</a>
+
+    <script>
+        const auta = document.getElementById('auta');
+        const info = document.getElementById('info');
+        const checkbox = document.getElementById('checkbox');
+        const wiekszy = document.getElementById('wiekszy');
+        const mniejszy = document.getElementById('mniejszy');
+
+
+        auta.addEventListener('change', function(){
+            wiekszy.innerHTML = `<h1>Large image</h1> <img src="${auta.value}_duze.jpg" alt="auta">`,
+            mniejszy.innerHTML = `<h1>Small image</h1> <img src="${auta.value}_male.jpg" alt="auta">`
+        })
+       
+
+
+        checkbox.addEventListener('change', function(){
+            if (checkbox.checked){
+                info.innerHTML = "<h2>Remember! Read the regulations</h2>"
+            } else {
+                info.innerHTML = "";
+            }
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>
